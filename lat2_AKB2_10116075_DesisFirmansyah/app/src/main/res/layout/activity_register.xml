@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".Register">
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_header"
+
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@id/img_head"
+        android:background="#d1d2d4" />
+
+    <ImageView
+        android:id="@+id/img_head_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_header_back"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+    <TextView
+        android:id="@+id/txt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/img_head_back"
+        android:text="Register"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/et_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_head"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#CECECF"
+        android:hint="@string/username"
+        android:importantForAutofill="no"
+        android:paddingBottom="15dp"
+        android:textColor="#939597"
+        android:textColorHint="#939597"
+        android:textSize="13sp"
+        tools:ignore="TextFields,UnusedAttribute" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_user"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#CECECF"
+        android:hint="@string/email"
+        android:paddingBottom="15dp"
+        android:textColor="#939597"
+        android:textColorHint="#939597"
+        android:textSize="13sp"
+        tools:ignore="Autofill,TextFields" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_email"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#CECECF"
+        android:hint="@string/phone_number"
+        android:paddingBottom="15dp"
+        android:textColor="#939597"
+        android:textColorHint="#939597"
+        android:textSize="13sp"
+        tools:ignore="Autofill,TextFields" />
+
+    <LinearLayout
+        android:id="@+id/line_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_phone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry,UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/img_radio_on"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_register_radio_on"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/male"
+                android:textColor="#939597"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/img_radio_off"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_register_radio_off"
+                android:contentDescription="@string/todo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/female"
+                android:textColor="#939597"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_type_blood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_gender"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingEnd="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/ic_register_dropdown"
+                    android:contentDescription="@string/todo" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#CECECF"
+                    android:hint="@string/blood_type"
+                    android:paddingBottom="15dp"
+                    android:textColor="#939597"
+                    android:textColorHint="#939597"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill,TextFields" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_register_dropdown"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#CECECF"
+                    android:hint="Reshus"
+                    android:paddingBottom="15dp"
+                    android:textColor="#939597"
+                    android:textColorHint="#939597"
+                    android:textSize="13dp"
+                    tools:ignore="Autofill,HardcodedText,SpUsage,TextFields" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_type_blood"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#CECECF"
+        android:hint="@string/password"
+        android:paddingBottom="15dp"
+        android:textColor="#939597"
+        android:textColorHint="#939597"
+        android:textSize="13dp"
+        tools:ignore="Autofill,SpUsage,TextFields" />
+
+    <EditText
+        android:id="@+id/et_repass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_pass"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#CECECF"
+        android:hint="@string/retype_password"
+        android:paddingBottom="15dp"
+        android:textColor="#939597"
+        android:textColorHint="#939597"
+        android:textSize="13sp"
+        tools:ignore="Autofill,TextFields" />
+
+    <LinearLayout
+        android:id="@+id/line_per_org"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_repass"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        tools:ignore="DisableBaselineAlignment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry,UseCompoundDrawables">
+
+            <ImageView
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_register_radio_on"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Personal"
+                android:textColor="#939597"
+                android:textSize="13dp"
+                tools:ignore="HardcodedText,SpUsage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_register_radio_off"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Organization"
+                android:textColor="#939597"
+                android:textSize="13dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_job"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_per_org"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#CECECF"
+        android:hint="@string/job"
+        android:paddingBottom="15dp"
+        android:textColor="#939597"
+        android:textColorHint="#939597"
+        android:textSize="13sp"
+        tools:ignore="Autofill,TextFields" />
+
+
+    <ImageView
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_below="@id/line_per_org"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/ic_register_dropdown"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/et_home_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_job"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#CECECF"
+        android:hint="Home Address"
+        android:paddingBottom="15dp"
+        android:textColor="#939597"
+        android:textColorHint="#939597"
+        android:textSize="13sp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <EditText
+        android:id="@+id/et_loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_home_address"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#CECECF"
+        android:hint="Default Location"
+        android:paddingBottom="15dp"
+        android:textColor="#939597"
+        android:textColorHint="#939597"
+        android:textSize="13dp"
+        tools:ignore="Autofill,HardcodedText,SpUsage,TextFields" />
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/et_home_address"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/ic_blood_needed_location"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/img_term"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/et_loc"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_register_terms_on"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_loc"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/img_term"
+        android:text="Agree with Terms and Condition"
+        android:textColor="#939597"
+        android:textSize="13dp"
+        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_term"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/buttonshape2"
+        android:text="REGISTER"
+        android:textColor="#40B4E7"
+        tools:ignore="HardcodedText" />
+</RelativeLayout>

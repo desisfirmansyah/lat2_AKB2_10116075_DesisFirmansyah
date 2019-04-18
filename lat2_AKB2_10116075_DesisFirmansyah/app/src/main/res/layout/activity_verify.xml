@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#43b3e6"
+    android:padding="20dp"
+    tools:context=".Verify">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txt_notice"
+        android:layout_marginBottom="10dp"
+        android:text="Verify your Account"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="35sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txt_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/et_ver_code"
+        android:layout_marginBottom="50dp"
+        android:text="We have send verfication code to your email"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="13sp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/et_ver_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_send"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#FFF"
+        android:hint="@string/enter_verification_code_here"
+        android:paddingBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
+        android:textSize="15sp"
+        tools:ignore="Autofill,TextFields" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/buttonshape"
+        android:text="@string/send"
+        android:textColor="#FFF"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_send"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_question_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_fb"
+            android:text="doesn't get the code?"
+            android:textColor="#FFF"
+            android:textSize="13dp"
+
+            tools:ignore="HardcodedText,ObsoleteLayoutParam,SpUsage" />
+
+        <TextView
+            android:id="@+id/txt_resend_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_fb"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/txt_question"
+            android:text="@string/resend"
+            android:textColor="#FFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+
+            tools:ignore="ObsoleteLayoutParam" />
+    </LinearLayout>
+</RelativeLayout>

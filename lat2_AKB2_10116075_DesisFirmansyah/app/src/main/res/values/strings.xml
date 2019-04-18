@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">lat2_AKB2_10116075_DesisFirmansyah</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+    <string name="connect_with_facebook">connect with facebook</string>
+    <string name="register">register</string>
+    <string name="email">email</string>
+    <string name="phone_number">phone number</string>
+    <string name="todo">todo</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="blood_type">blood type</string>
+    <string name="retype_password">retype password</string>
+    <string name="job">job</string>
+    <string name="verify">verify</string>
+    <string name="resend">resend</string>
+    <string name="send">send</string>
+    <string name="enter_verification_code_here">enter verification code here</string>
+</resources>
